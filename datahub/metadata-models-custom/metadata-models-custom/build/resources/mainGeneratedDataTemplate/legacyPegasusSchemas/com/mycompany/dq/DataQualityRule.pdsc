@@ -1,0 +1,24 @@
+{
+  "type" : "record",
+  "name" : "DataQualityRule",
+  "namespace" : "com.mycompany.dq",
+  "fields" : [ {
+    "name" : "field",
+    "type" : "string",
+    "optional" : true
+  }, {
+    "name" : "isFieldLevel",
+    "type" : "boolean"
+  }, {
+    "name" : "type",
+    "type" : "string"
+  }, {
+    "name" : "checkDefinition",
+    "type" : "string",
+    "optional" : true
+  }, {
+    "name" : "url",
+    "type" : "string",
+    "optional" : true
+  } ]
+}

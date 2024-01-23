@@ -1,0 +1,27 @@
+# Inlined from /metadata-ingestion/examples/data_product/dataproduct.yaml
+id: pet_of_the_week
+domain: cryptocurrencies
+display_name: Pet of the Week Campaign
+description: |-
+  This campaign includes Pet of the Week data.
+
+# List of assets that belong to this Data Product
+assets:
+  - urn:li:dataset:(urn:li:dataPlatform:snowflake,long_tail_companions.analytics.pet_details,PROD)
+
+owners:
+  - id: urn:li:corpuser:jdoe
+    type: BUSINESS_OWNER
+
+# Tags associated with this Data Product
+tags:
+  - urn:li:tag:adoption
+
+# Glossary Terms associated with this Data Product
+terms:
+  - urn:li:glossaryTerm:ClientsAndAccounts.AccountBalance
+
+# Custom Properties
+properties:
+  lifecycle: production
+  sla: 7am every day

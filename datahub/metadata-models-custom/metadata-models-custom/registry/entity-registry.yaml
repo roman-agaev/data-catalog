@@ -1,0 +1,12 @@
+id: mycompany-dq-model
+entities:
+  - name: dataset
+    aspects:
+      - customDataQualityRules
+      - noaDataProductCommon
+  - name: container
+    aspects:
+      - customDataQualityRules
+  - name: dataproduct
+    aspects:
+      - noaDataProductCommon

@@ -1,0 +1,21 @@
+{
+  "type" : "record",
+  "name" : "DataQualityRules",
+  "namespace" : "com.mycompany.dq",
+  "fields" : [ {
+    "name" : "rules",
+    "type" : {
+      "type" : "array",
+      "items" : "DataQualityRule"
+    }
+  } ],
+  "Aspect" : {
+    "autoRender" : true,
+    "name" : "customDataQualityRules",
+    "renderSpec" : {
+      "displayName" : "DQ Rules",
+      "displayType" : "tabular",
+      "key" : "rules"
+    }
+  }
+}

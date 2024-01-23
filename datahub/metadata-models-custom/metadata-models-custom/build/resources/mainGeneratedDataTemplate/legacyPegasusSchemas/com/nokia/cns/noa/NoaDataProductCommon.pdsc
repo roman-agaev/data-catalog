@@ -1,0 +1,13 @@
+{
+  "type" : "record",
+  "name" : "NoaDataProductCommon",
+  "namespace" : "com.nokia.cns.noa",
+  "fields" : [ {
+    "name" : "dpType",
+    "type" : "string",
+    "optional" : true
+  } ],
+  "Aspect" : {
+    "name" : "noaDataProductCommon"
+  }
+}

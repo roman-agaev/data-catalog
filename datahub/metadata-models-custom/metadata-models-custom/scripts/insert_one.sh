@@ -1,0 +1,2 @@
+python -m datahub put --urn "urn:li:dataProduct:5396d53d-ad76-4315-8de4-48e68c2e1718" --aspect customDataQualityRules --aspect-data data/dq_rule.json
+python -m datahub put --urn "urn:li:dataProduct:3eb4cc03-10f3-4a93-9e87-53db21a85d99" --aspect noaDataProductCommon --aspect-data data/noa_training_dp.json

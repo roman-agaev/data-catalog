@@ -1,0 +1,8 @@
+namespace com.nokia.cns.noa
+
+@Aspect = {
+  "name": "noaDataProductCommon",
+}
+record NoaDataProductCommon {
+  dpType: optional string
+}

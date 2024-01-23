@@ -1,0 +1,10 @@
+personal token (java_access):
+eyJhbGciOiJIUzI1NiJ9.eyJhY3RvclR5cGUiOiJVU0VSIiwiYWN0b3JJZCI6InBhb2xvLnJlbmRhbm9Abm9raWEuY29tIiwidHlwZSI6IlBFUlNPTkFMIiwidmVyc2lvbiI6IjIiLCJqdGkiOiJmMzI2MmZjMC05OWU4LTRmOTQtYjU4Ny1iM2FhODA4ZjRiOTAiLCJzdWIiOiJwYW9sby5yZW5kYW5vQG5va2lhLmNvbSIsImlzcyI6ImRhdGFodWItbWV0YWRhdGEtc2VydmljZSJ9.z0boge_AGXpY6jGCgbgc5hWMGFwSv8KKDPWwIABhmb0
+
+
+curl -X GET 'http://34.34.140.116:9002/config' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhY3RvclR5cGUiOiJVU0VSIiwiYWN0b3JJZCI6InBhb2xvLnJlbmRhbm9Abm9raWEuY29tIiwidHlwZSI6IlBFUlNPTkFMIiwidmVyc2lvbiI6IjIiLCJqdGkiOiJmMzI2MmZjMC05OWU4LTRmOTQtYjU4Ny1iM2FhODA4ZjRiOTAiLCJzdWIiOiJwYW9sby5yZW5kYW5vQG5va2lhLmNvbSIsImlzcyI6ImRhdGFodWItbWV0YWRhdGEtc2VydmljZSJ9.z0boge_AGXpY6jGCgbgc5hWMGFwSv8KKDPWwIABhmb0' \
+--header 'Content-Type: application/json' \
+--data-raw '{"query":"{\n  me {\n    corpUser {\n        username\n    }\n  }\n}","variables":{}}'
+
+

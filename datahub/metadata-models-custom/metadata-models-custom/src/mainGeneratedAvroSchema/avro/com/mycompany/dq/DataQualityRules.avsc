@@ -1,0 +1,43 @@
+{
+  "type" : "record",
+  "name" : "DataQualityRules",
+  "namespace" : "com.mycompany.dq",
+  "fields" : [ {
+    "name" : "rules",
+    "type" : {
+      "type" : "array",
+      "items" : {
+        "type" : "record",
+        "name" : "DataQualityRule",
+        "fields" : [ {
+          "name" : "field",
+          "type" : [ "null", "string" ],
+          "default" : null
+        }, {
+          "name" : "isFieldLevel",
+          "type" : "boolean"
+        }, {
+          "name" : "type",
+          "type" : "string"
+        }, {
+          "name" : "checkDefinition",
+          "type" : [ "null", "string" ],
+          "default" : null
+        }, {
+          "name" : "url",
+          "type" : [ "null", "string" ],
+          "default" : null
+        } ]
+      }
+    }
+  } ],
+  "Aspect" : {
+    "autoRender" : true,
+    "name" : "customDataQualityRules",
+    "renderSpec" : {
+      "displayName" : "DQ Rules",
+      "displayType" : "tabular",
+      "key" : "rules"
+    }
+  }
+}

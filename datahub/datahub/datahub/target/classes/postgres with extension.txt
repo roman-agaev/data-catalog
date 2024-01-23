@@ -1,0 +1,52 @@
+helm install -f values.yaml my-postgres oci://registry-1.docker.io/bitnamicharts/postgresql
+
+
+values.yaml:
+
+auth:
+  postgresPassword: "password"
+
+postgresqlSharedPreloadLibraries: "pgaudit,pg_stat_statements"
+
+helm upgrade -f values-postgres.yml poc-postgresql bitnami/postgresql --version 12.12.4
+
+ALTER USER crypto WITH Superuser;
+CREATE EXTENSION pg_stat_statements;
+
+select * from pg_stat_statements;
+
+
+
+
+open metadata:
+
+CREAZIONE NFS-SERVER
+gcloud container clusters update noa-cluster-test --update-addons=GcePersistentDiskCsiDriver=ENABLED --region europe-west1
+gcloud compute disks create --size=100GB --zone=europe-west1- nfs-disk
+gcloud compute disks create --size=100GB --zone=europe-west1-c nfs-disk
+gcloud compute disks create --size=100GB --zone=europe-west1-d nfs-disk
+gcloud compute disks list
+kubectl create -f nfs-server-deployment.yml
+kubectl create -f nfs-cluster-ip-service.yml
+kubectl get service nfs-server -o jsonpath='{.spec.clusterIP}'
+vi dags_pv_pvc.yml
+kubectl create -f dags_pv_pvc.yml
+vi dags_pv_pvc.yml
+vi logs_pv_pvc.yml
+kubectl create -f logs_pv_pvc.yml
+vi permissions_pod.yml
+kubectl create -f permissions_pod.yml
+
+
+
+helm install openmetadata-dependencies open-metadata/openmetadata-dependencies --values values-dependencies.yml
+
+kubectl create secret generic mysql-secrets --from-literal=openmetadata-mysql-password=openmetadata_password
+kubectl create secret generic airflow-secrets --from-literal=openmetadata-airflow-password=admin
+kubectl create secret generic airflow-mysql-secrets --from-literal=airflow-mysql-password=airflow_pass
+kubectl edit secret mysql-secrets
+
+kubectl get secret mysql-secrets
+kubectl describe secret mysql-secrets
+helm install openmetadata open-metadata/openmetadata
+kubectl update secret mysql-secrets --from-literal=openmetadata-mysql-password=openmetadata_password
